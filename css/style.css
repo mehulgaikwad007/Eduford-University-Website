@@ -1,0 +1,396 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    /* ADD GOOGLE FONT */
+}
+
+/* ----- Style Header ----- */
+.header{
+    /* add banner */
+    min-height: 100vh;  /* 100vh because website open zalya zalya full screen img disavi*/
+    width: 100%;
+    background-image:linear-gradient(rgba(4,9,30,0.7),rgba(4,7,30,0.7)), url("image/banner.png"); /*to display banner blakish*/
+    background-position: center;
+    background-size:cover;
+    position: relative;
+    
+}
+
+/* TO SET LOGO AND UL IN ROW */
+/* ----- STYLE LOGO ----- */
+nav img{
+    width: 150px;
+}
+nav{
+    display: flex;
+    padding: 2% 6%; /* PADDING top/bottom and right/left */
+    justify-content:space-between;
+    align-items:center; /*TO SET LOGO AND NAV-LINKS VERTICALLY CENTER */
+}
+
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+
+.nav-links ul li{
+    list-style: none;  /* TO REMOVE DOT */
+    display: inline-block;  /* TO SET LIST ITEMS INLINE */
+    position: relative; /*not understand why*/
+    padding: 8px 12px;
+
+}
+
+.nav-links ul li a{
+    color: white;
+
+    /* TO REMOVE UNDERLIN */
+    text-decoration: none;
+
+    font-size: 16px;
+
+    /* TO CHANGE FONT ADD GOOGLE FONT IN  * SELECTOR */
+}
+
+/* ADD UNDERLINE (UNDERLINE WILL DISPLAYS AFTER HOVER CURSER) */
+.nav-links ul li::after{
+    content: "";
+
+    background-color:orangered; /* color of underline*/ /*OR ONLY background:orange write;*/
+    height: 2px;   /* height of underline*/
+    width: 0%;     /* width of underline*/ /* zero width when cursor not hover*/
+    display: block; /* DISPLAY BLOCK KELYASHIVAY UNDERLINE NAHI DIAST*/
+
+    margin: auto;
+
+    transition: 0.5s; /* speed of width change after hover*/
+
+}
+
+/* ADD HOVER EFFCT */
+.nav-links ul li:hover::after{
+    width: 100%;  /*AFTER HOVER WIDTH WILL 100%*/
+}
+
+/* ----- STYLE TEXT-BOX -----*/
+.text-box{
+    color: white;
+
+    display: flex;            /* display flex kel ani flex-direction:column; tyamule text-box madhil content eka khali ek ale ani align-items:center; mule y-axis la center zale tyamule visit-button center zala*/
+    flex-direction: column;
+    align-items: center;
+
+   width: 90%; /* take 90% screen as a width*/
+
+   position:absolute;
+   top: 50%;
+   left: 50%;
+
+   transform:translate(-50%, -50%);
+}
+
+.text-box h1{
+    text-align: center;
+    padding: 10px;
+    font-size: 60px;
+    margin-top: 30px;
+}
+.text-box p{
+    text-align: center;
+    font-size: 20px;
+    padding: 15px;
+}
+
+.visit-button{
+    /* To Remove underline */
+    text-decoration: none;
+
+    color: white;
+
+    
+    border: 2px solid white ;
+    padding: 10px;
+    margin: 25px;
+
+    cursor: pointer;
+
+}
+
+.visit-button:hover{
+    border: 2px solid orangered;
+    background: orangered;
+    transition: 0.5s;
+}
+
+/* ----- course ----- */
+.course{
+    text-align: center;
+    width: 80%;
+    margin: auto;
+
+    padding-top: 100px;
+}
+
+.course h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.course p{
+    color: #777;
+    font-size: 14px;
+    font-weight:300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+
+    margin: 5% 0%; /* top/bottom and right/left */
+}
+.course-col{
+    flex-basis: 31%; /*specifies initial size of flex item (to srt legth of flex items)*/ /* 31% means pratyak flex item la  31% width milanr (31+31+31=93% means 7% for space) */
+    background-color:rgb(245, 217, 184);
+
+    padding: 20px 12px;
+    border-radius: 10px;
+    box-sizing: border-box; /*  after adding box-sizing:border-box Content (width and height) includes (content + padding + border)*/
+
+    transition: 0.5s;  /* work when add hover hover*/
+}
+
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px;
+}
+
+/* add hover effect on course column */
+
+.course-col:hover{
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0.2);
+}
+
+/* ----- campus ----- */
+
+.campus{
+    text-align: center;
+
+    width: 80%;
+    margin: auto;
+
+    padding-top: 50px;
+}
+
+.campus h1{
+    font-size :36px;
+    font-weight: 600;
+}
+
+.campus p{
+    color: #777;
+    font-size: 14px;
+    font-weight:300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.campus-col{
+    flex-basis: 32%;
+    border-radius:10px;
+    margin-bottom:30px;
+    position: relative;
+    overflow:hidden;
+}
+
+.campus-col img{
+    width: 100%;
+}
+
+.layer{
+    background: transparent;
+    width: 100%;
+    height: 100%;
+
+    position:absolute;
+    top: 0px;
+    /* left: 0px; */
+
+    transition: 0.5s;
+}
+
+.layer:hover{
+    background:rgba(226, 0 , 0, 0.7);
+}
+
+/* To add hover in h3 */
+
+.layer h3{
+    color:#fff;
+    font-size: 26px;
+    font-weight:500px;
+
+    position:absolute;
+    bottom:0px;
+    left: 50%;
+    /* width: 100%; */
+
+    transform:translateX(-50%);
+
+    opacity:0;  /* Non visible*/
+
+    transition: 0.5s;  /* SPEED OF TEXT SLIDE ABOVE*/
+}
+
+.layer:hover h3{
+    opacity: 1;
+
+    /* TO SLIDE ABOVE H3 */
+    bottom:49%;
+}
+
+/* ----- Facilities ----- */
+.facilities{
+    text-align: center;
+
+    width: 80%;
+    margin: auto;
+
+    padding-top: 100px;
+}
+
+.facilities h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.facilities p{
+    color:#777 ;
+    font-size: 14px;
+    font-weight: 300;
+    line-height:22px;
+    padding:10px;
+}
+
+.facilities-col{
+    flex-basis: 32%;
+    border-radius:10px;
+    margin-bottom:30px;
+    position: relative;
+    overflow:hidden;
+
+    text-align: left;  /* paragraph text aligbn ment left*/
+}
+
+.facilities-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.facilities-col h3{
+    font-weight: 600px;
+
+    margin-top: 16px;
+    margin-bottom: 15px;
+
+    text-align: left;
+}
+
+.facilities-col p{
+    padding: 0%;
+}
+
+/* ----- Testimonials ----- */
+
+.testimonials{
+    text-align: center;
+
+    width: 80%;
+    margin: auto;
+
+    padding-top: 100px;
+    
+}
+
+.testimonials h1{
+font-size: 36px;
+font-weight: 600;
+}
+
+.testimonials p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+
+    line-height: 22px;
+    padding: 10px;
+}
+.testimonial-col img{
+    height: 40px;
+    border-radius: 50%;   /* to make img circular*/
+    
+     margin-left: 5px;
+    margin-right: 30px ; 
+
+}
+
+.testimonial-col{
+    background: #fff3f3;
+
+    flex-basis: 44%;
+    border-radius: 10px;
+    text-align: left;
+
+    padding: 25px;
+    margin-bottom: 30px;
+
+    cursor: pointer;
+
+} 
+
+.testimonial-col p{
+    padding: 0%;
+}
+
+/* ----- Call To Action ----- */
+
+.cta{
+    margin: 100px auto ;
+    width:80%;
+
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(image/banner2.jpg);
+    background-position: center;
+    background-size:cover;
+
+    text-align: center;
+    padding: 100px 0;
+    border-radius: 10px;
+}
+
+.cta h1{
+    color: #fff;
+    margin-bottom: 49px;
+    padding: 0%;
+}
+
+/* ----- Footer ----- */
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding:30px 0;
+}
+
+.footer h4{
+    margin-bottom:25px;
+    margin-top:20px;
+    font-weight:600;
+}
+
+.footer p{
+    padding-top: 20px;
+}

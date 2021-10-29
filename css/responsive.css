@@ -1,0 +1,86 @@
+/* TO MAKE WEBSITE RESPONSIVE USE MEDIA QUERIES */
+
+/*01 make navigation and logo responsive */
+
+/* skip */
+
+/* 02 Make responsive content of text box */
+@media(max-width:700px){
+    .text-box h1{
+        font-size: 35px;
+    }
+
+    .text-box p{
+        font-size: 12px;
+    }
+
+    .visit-button{
+        border: 1px solid white ;
+        padding: 6px;
+        margin: 15px;
+    
+    }
+    
+}
+
+/* 03 Make responsive course */
+
+@media(max-width:700px){
+    .course h1{
+        font-size: 21px;
+        }
+    
+        .course p{
+        font-size: 9px;
+        }
+    
+        .row{
+            /* display: flex; */
+            flex-direction: column;
+        }
+    
+        .course-col{
+            margin:10px;
+        }
+}
+
+/* To make Responsive Campus  */
+
+@media(max-width:700px){
+    .campus h1{
+        font-size: 24px;
+    }
+
+    .campus p{
+        font-size: 9px;
+    }
+}
+
+/* To make responsive Facilities */
+@media(max-width:700px){
+    .facilities h1{
+        font-size: 24px;
+    }
+}
+
+/* To make  Responsive testimonials*/
+
+@media (max-width:700px) {
+    .testimonial-col{
+    margin-left:0 px;       
+    margin-right: 0px                 ;
+ }
+ 
+ .testimonials h1{
+     font-size: 24px;
+ }
+}
+
+/* To make Responsive cta */
+
+@media(max-width:700px){
+    .cta h1{
+        font-size: 24px;
+    
+    }
+}
